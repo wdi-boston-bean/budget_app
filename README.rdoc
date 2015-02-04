@@ -1,26 +1,45 @@
-add upcoming payment comments with categories
+CAN DO
+
+set app homepage to transactions index
+add transaction date
+
+MUST RESEARCH
 
 don't know if you can have a model belong to two others, like comments belonging to both categories and transactions
 
-add transaction date
-
-set app homepage to transactions index
-
-add accounts 
-
-To Do
-
-category table/controller/model - id, name
-
 users - each user can be linked to a default personal account, has usernames, passwords, ids - where/how do I do a sign in?
 
-accounts - individual ones and shared
+DOUBLE ENTRY ACCOUNTING
 
-for each transation, track direction of flow account from and account to [house, individual accounts, out] - each transation is two for amount leaving and then going in - every transaction is a tranfser
+for each transation, track direction of flow account from and account to - each transation is two for amount leaving and then going in - every transaction is a tranfser
 
+account types
+individual
+shared
+"ledger" - must have one zero balanced journal for all transactions
+  
 payment types
 out
 shared
 direct
 
 when you imput an amount, you specify account_from and account2_to
+
+where does this logic go? Methods in the controllers, models? Probably Models, as they inherit from ActiveRecord::Base
+
+In model for task lists - 
+
+def completed_tasks
+self.tasks.where(completed:true)
+end
+
+def incomplete_tasks
+self.where(completed: false)
+end
+
+so in show you have access to @list.incomplete_tasks and @list.completed_tasks
+
+RESOURCES
+
+https://vikrampareek.wordpress.com/2012/09/19/185/
+https://github.com/mbulat/plutus/tree/master/app

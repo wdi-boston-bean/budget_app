@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+root 'transactions#index'
   resources :categories
   resources :transactions do
     resources :comments

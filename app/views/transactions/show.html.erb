@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Amount:</strong>
+  <h2>Amount:</h2>
   <p><%= @transaction.amount %></p>
+
   <p><%= @transaction.category.name %></p>
   <h2>Comments</h2>
   <% @transaction.comments.each do |comment| %>
